@@ -1,0 +1,124 @@
+:root {
+  --text-body: #fff;
+  --btn-border-color: #000;
+  --btn-disabled-color: #696969;
+  --control-container-background: #1c252e;
+}
+
+.embla {
+  max-width: 48rem;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+}
+.embla__viewport {
+  overflow: hidden;
+  position: relative;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  height: 500px;
+}
+
+.embla-thumbs {
+  --thumbs-slide-spacing: 0.8rem;
+  --thumbs-slide-height: 6rem;
+  margin-top: var(--thumbs-slide-spacing);
+}
+.embla-thumbs__viewport {
+  overflow: hidden;
+}
+.embla-thumbs__container {
+  display: flex;
+  flex-direction: row;
+  margin-left: calc(var(--thumbs-slide-spacing) * -1);
+}
+.embla-thumbs__slide {
+  flex: 0 0 22%;
+  min-width: 0;
+  padding-left: var(--thumbs-slide-spacing);
+}
+.embla-thumbs__slide img {
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .embla-thumbs__slide {
+    flex: 0 0 15%;
+  }
+}
+
+.embla-thumbs__slide img {
+  filter: brightness(0.75);
+  height: 60px;
+  width: 70px;
+  transition: filter 0.4s ease;
+}
+
+.embla-thumbs__slide.embla-thumbs__slide--selected img {
+  border: 3px solid var(--palette-info-main);
+  filter: brightness(1);
+}
+
+.embla__controls {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  background: var(--control-container-background);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+.embla__button {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  z-index: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.embla__button:disabled {
+  color: var(--btn-disabled-color);
+}
+.embla__button__svg {
+  width: 35%;
+  height: 35%;
+}
+.embla__selected-snap-display {
+  padding: 4px;
+  width: 50px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+}

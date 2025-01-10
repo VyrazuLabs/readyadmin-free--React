@@ -5,6 +5,7 @@ Introducing ReadyAdmin: Your Open Source Admin Panel
 # Overview
 
 ReadyAdmin is a **free, open-source admin panel** developed by Vyrazu Labs, designed to streamline the management of web applications with an intuitive and responsive interface. Built using React, this admin panel offers a modern solution for developers looking to enhance their projects with a robust backend management system.
+For the design reference, you can find the figma preview [here](https://www.figma.com/design/zBPbveNjhq0hZmqYUD9Hcv/Readyadmin-(Free)?node-id=0-1&p=f&t=iNYGyQD4AmaDNeHd-0).
 
 ## Table of Contents
 
@@ -144,7 +145,7 @@ Open the project
 For any inquiries or support, please contact:
 
 - Email: [info@vyrazu.com](mailto:info@vyrazu.com)
-- Project Maintainer: [Vyrazu Labs Ltd](#https://vyrazu.com/)
+- Project Maintainer: [Vyrazu Labs Ltd](https://vyrazu.com/)
 
 ## License
 
